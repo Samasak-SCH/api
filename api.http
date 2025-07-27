@@ -6,7 +6,7 @@
 @base_url = {{ $dotenv APP_BASE_URL }}
 @user_token = {{ $dotenv APP_USER_TOKEN }}
 
-### Register account
+### Identification / Register account
 POST {{base_url}}/api/auth/local/register HTTP/1.1
 Content-Type: application/json
 
@@ -21,7 +21,7 @@ Content-Type: application/json
 GET {{base_url}}/api/users HTTP/1.1
 Content-Type: application/json
 
-### Authentication / Login
+### Authentication -> Authorization  / Login -> User Level
 POST {{base_url}}/api/auth/local HTTP/1.1
 Content-Type: application/json
 
